@@ -70,6 +70,8 @@ def run(hyg):
 
             elif remain == -1:
                 continue
+            elif remain == 0:
+                logger.info(i18n_format("ticket_sto_less"))
             else:
                 logger.error(i18n_format("unk_status") + str(remain))
             time.sleep(hyg.config["status_delay"])
